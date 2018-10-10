@@ -14,7 +14,7 @@ class MainSection extends React.Component {
             <div className={classes.searchSec}>
               <input
                 type="text"
-                placeholder="Search .."
+                placeholder="Search by slot no or registration no .."
                 onChange={this.props.searchValUpdate}
                 value={this.props.searchVal}/>
               <button

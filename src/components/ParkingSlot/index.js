@@ -14,11 +14,15 @@ class ParkingSlot extends React.Component {
         </div>
         {this.props.generateSlot ?
           <div className={classes.slotContainer}>
+            <small>Start <i class="fas fa-angle-double-right"></i></small>
+
             <Slots
               slotClicked={this.props.slotClicked}
               slotsInfo={this.props.slotsInfo}
               generateSlot={this.props.generateSlot}
               slots={this.props.slots}/>
+
+            <small><i class="fas fa-ban"></i> End !</small>
           </div>
           :
           <p className={classes.text}>

@@ -29,7 +29,7 @@ class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      totalSlots: 48,
+      totalSlots: 50,
       slotsInfo: [],
       isAvalaible: [],
       availableSlots: [0],

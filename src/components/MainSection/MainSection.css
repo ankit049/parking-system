@@ -34,21 +34,26 @@
 }
 
 .searchSec input {
-  padding: 5px 10px;
+  padding: 6px 15px;
   border-radius: 20px;
   border: 1px solid silver;
   padding-right: 40px;
+  width: 80%;
 }
 .searchSec button {
   position: absolute;
-  background: transparent;
+  background: #d8f2ef;
   border: navajowhite;
-  top: 2px;
-  right: -4px;
-  color: dimgray;
-  font-size: 12px;
-}
+  top: 4px;
+  right: 6px;
+  color: darkgray;
+  font-size: 10px;
+  border-radius: 30px;
 
+}
+.searchSec button:hover {
+  background: #beeae5;
+}
 .searchSec input:focus {
   outline: none !important;
   outline-offset: 0px !inherit;
