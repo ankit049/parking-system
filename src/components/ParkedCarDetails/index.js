@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './ParkedCarDetails.css';
 import Aux from '../../HOC/Aux';
-import Backdrop from '../UI/Backdrop';
 
 class ParkedCarDetails extends React.Component {
 

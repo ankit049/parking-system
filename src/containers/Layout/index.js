@@ -1,21 +1,18 @@
 import React from 'react';
-import classes from './Layout.css';
 import Aux from '../../HOC/Aux';
 import MainSection from '../../components/MainSection';
 import ParkingSlot from '../../components/ParkingSlot';
 import Modal from '../../components/UI/Modal';
-import ParkedCarDetails from '../../components/ParkedCarDetails';
 
 // create slots of given no of slots
 const createAvaiableSlots = (slots) => {
   const slotArray = [...Array(slots)].map( (key, i) => i+1);
-  console.log("availableSlots : "+ slotArray);
+  // console.log("availableSlots : "+ slotArray);
   return slotArray;
 }
 
 // Generate random Registration number
 const generateRegNoHandler = () => {
-  const colors = ['black', 'white', 'blue', 'red'];
   const alphabets = [...Array( 26 )].fill( 1 ).map( ( _, i ) => String.fromCharCode( 65 + i ) );
 
   const ranNo1 = Math.floor(Math.random()*100);
@@ -144,27 +141,27 @@ class Layout extends React.Component {
     // console.log("availableSlots : " + this.state.availableSlots);
     // console.log("filledSlots : " + this.state.filledSlots);
 
-    const oldAvailableSlots = this.state.availableSlots;
-    const oldFilledSlots = this.state.filledSlots;
+    // const oldAvailableSlots = this.state.availableSlots;
+    // const oldFilledSlots = this.state.filledSlots;
 
     this.setState(prevState => {
       const oldSlotsInfo = [...prevState.slotsInfo];
       // console.log("oldSlotsInfo : "+ JSON.stringify(oldSlotsInfo));
       oldSlotsInfo[seqNo-1] = null;
       // console.log("oldSlotsInfo after alter : "+ JSON.stringify(oldSlotsInfo));
-      const oldAvailableSlots = [...prevState.availableSlots];
-      const oldFilledSlots = [...prevState.filledSlots];
-      oldFilledSlots[seqNo-1] = null;
-      const newFilledSlots = delete oldFilledSlots[seqNo-1];
+      // const oldAvailableSlots = [...prevState.availableSlots];
+      // const oldFilledSlots = [...prevState.filledSlots];
+      // oldFilledSlots[seqNo-1] = null;
+      // const newFilledSlots = delete oldFilledSlots[seqNo-1];
       // console.log("New filledSlots : "+ oldFilledSlots);
 
       const isAval = [...prevState.isAvalaible];
       isAval.pop();
 
-      oldAvailableSlots[seqNo-1] = seqNo;
-      const newAvailableSlots = oldAvailableSlots.sort((a, b) => {
-        return a-b;
-      });
+      // oldAvailableSlots[seqNo-1] = seqNo;
+      // const newAvailableSlots = oldAvailableSlots.sort((a, b) => {
+      //   return a-b;
+      // });
       // console.log("Sorted availableSlots : "+ newAvailableSlots);
 
       return({

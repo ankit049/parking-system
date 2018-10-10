@@ -5,7 +5,7 @@ import Aux from '../../HOC/Aux';
 class Slots extends React.Component {
   render() {
     console.log("Total Slots in Slots Component : " + this.props.slots);
-    const totalSlots = this.props.slots;
+    // const totalSlots = this.props.slots;
     let renderSlots;
 
     if(this.props.generateSlot)
@@ -22,7 +22,6 @@ class Slots extends React.Component {
           let title = `Current Slot No : ${seqNo}`
           return (
             <a
-              href="#"
               key={i}
               data-index={seqNo}
               title={title}
