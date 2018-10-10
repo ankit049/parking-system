@@ -35,6 +35,7 @@ class Modal extends React.Component {
                   <i className="fas fa-car" style={{color:this.props.details['ticket']['color']}}></i>
                 </div>
                 <div className={classes.ticketDetails}>
+                  <i className="far fa-circle"></i>
                   <p>
                     Slot No : <small><strong>{this.props.details['slotNo']}</strong></small>
                   </p>

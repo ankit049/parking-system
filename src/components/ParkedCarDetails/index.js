@@ -15,9 +15,11 @@ class ParkedCarDetails extends React.Component {
               <div className={classes.ticketSec}>
                 <div className={classes.carIcon}>
                   <i className="far fa-circle"></i>
+
                   <i className="fas fa-car" style={{color:this.props.details['ticket']['color']}}></i>
                 </div>
                 <div className={classes.ticketDetails}>
+                  <i className="far fa-circle"></i>
                   <p>
                     Slot No : <small><strong>{this.props.details['slotNo']}</strong></small>
                   </p>
