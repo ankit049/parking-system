@@ -12,6 +12,7 @@ class Slots extends React.Component {
     {
       renderSlots = [...Array(this.props.slots)].map((key, i) => {
         let seqNo = i+1;
+        console.log("-----Current Slot info---- : "+ JSON.stringify(this.props.slotsInfo[i]));
         if(this.props.slotsInfo[i]) {
           console.log("seqNo:"+JSON.stringify(this.props.slotsInfo[i][seqNo]));
           let color;

@@ -59,6 +59,7 @@ class Layout extends React.Component {
         const colors = ['black', 'goldenrod', 'blue', 'red'];
         const regNo = generateRegNoHandler();
         const seqNo = this.state.availableSlots[0];
+        console.log("Seq No at Generate Handler : "+ seqNo);
 
         const ranColor = colors[Math.floor(Math.random()*4)];
         const ticket = {
@@ -81,7 +82,12 @@ class Layout extends React.Component {
 
         this.setState(prevState => {
           const alterSlotsInfo = [...prevState.slotsInfo];
-          alterSlotsInfo.push(newSlot);
+          console.log("Slot at deleted position : "+ JSON.stringify(alterSlotsInfo[seqNo-1]));
+          if(!alterSlotsInfo[seqNo-1]) {
+            alterSlotsInfo[seqNo-1] = newSlot;
+          } else {
+            alterSlotsInfo.push(newSlot);
+          }
 
           const addSlots = prevState.availableSlots[0];
           const alterFilledSlots = prevState.filledSlots;
@@ -146,26 +152,33 @@ class Layout extends React.Component {
 
     this.setState(prevState => {
       const oldSlotsInfo = [...prevState.slotsInfo];
-      // console.log("oldSlotsInfo : "+ JSON.stringify(oldSlotsInfo));
-      oldSlotsInfo[seqNo-1] = null;
-      // console.log("oldSlotsInfo after alter : "+ JSON.stringify(oldSlotsInfo));
-      // const oldAvailableSlots = [...prevState.availableSlots];
-      // const oldFilledSlots = [...prevState.filledSlots];
-      // oldFilledSlots[seqNo-1] = null;
-      // const newFilledSlots = delete oldFilledSlots[seqNo-1];
-      // console.log("New filledSlots : "+ oldFilledSlots);
+      console.log("oldSlotsInfo : "+ JSON.stringify(prevState));
+      let newSlot = {};
+      newSlot[seqNo] = {};
+      oldSlotsInfo[seqNo-1] = false;
+      console.log("oldSlotsInfo after alter : "+ JSON.stringify(oldSlotsInfo));
+
+      //remove current clicked element from filledSlots
+      const oldFilledSlots = [...prevState.filledSlots];
+      oldFilledSlots.splice(seqNo-1, 1);
+      console.log("New filledSlots : "+ oldFilledSlots);
 
       const isAval = [...prevState.isAvalaible];
       isAval.pop();
 
-      // oldAvailableSlots[seqNo-1] = seqNo;
-      // const newAvailableSlots = oldAvailableSlots.sort((a, b) => {
-      //   return a-b;
-      // });
-      // console.log("Sorted availableSlots : "+ newAvailableSlots);
+      // add current clicked element into the availableSlots
+      const oldAvailableSlots = [...prevState.availableSlots];
+      oldAvailableSlots.push(seqNo);
+
+      const newAvailableSlots = oldAvailableSlots.sort((a, b) => {
+        return a-b;
+      });
+      console.log("Sorted availableSlots : "+ newAvailableSlots);
 
       return({
         slotsInfo: oldSlotsInfo,
+        availableSlots: newAvailableSlots,
+        filledSlots: oldFilledSlots,
         modalShow: false,
         isAvalaible: isAval
       });
