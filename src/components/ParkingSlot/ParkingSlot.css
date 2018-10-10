@@ -9,9 +9,10 @@
   padding: 15px;
   height: 77vh;
   overflow-y: auto;
-  /* border-bottom: 1px solid silver; */
   justify-items: center;
   align-items: center;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
 }
 .inputSlotSection {
   padding:20px 30px;
