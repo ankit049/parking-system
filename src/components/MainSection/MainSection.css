@@ -1,0 +1,67 @@
+.mainSection {
+  border: 1px solid silver;
+  flex:4;
+  position: relative;
+}
+
+.actionSection {
+  padding: 20px 15px 20px 15px;
+  border-bottom: 1px solid silver;
+  background: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.detailSection{
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  padding: 15px;
+  font-size: 13px;
+  color: dimgray;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.searchSec {
+  display: inline-block;
+  text-align: right;
+  position: relative;
+}
+
+.searchSec input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid silver;
+  padding-right: 40px;
+}
+.searchSec button {
+  position: absolute;
+  background: transparent;
+  border: navajowhite;
+  top: 2px;
+  right: -4px;
+  color: dimgray;
+  font-size: 12px;
+}
+
+.searchSec input:focus {
+  outline: none !important;
+  outline-offset: 0px !inherit;
+}
+.searchSec button:focus {
+  outline: none !important;
+}
+
+.mainBottomText {
+  position: absolute;
+  text-align: center;
+  bottom: -2px;
+  width: 100%;
+  border-top: 1px solid silver;
+  background: aliceblue;
+}

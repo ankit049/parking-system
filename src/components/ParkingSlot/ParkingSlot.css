@@ -1,0 +1,31 @@
+.parkingSection {
+  border-top: 1px solid silver;
+  flex:1;
+}
+
+.slotContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 15px;
+  height: 77vh;
+  overflow-y: auto;
+  /* border-bottom: 1px solid silver; */
+  justify-items: center;
+  align-items: center;
+}
+.inputSlotSection {
+  padding:20px 30px;
+  background: aliceblue;
+  border-bottom: 1px solid silver;
+}
+.text {
+  padding: 15px;
+  font-size: 13px;
+  color: dimgray;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 100px;
+}
+.inputSlotSection input {
+  padding: 5px 0px 5px 15px;
+}

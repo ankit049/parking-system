@@ -1,0 +1,43 @@
+.slotBtn {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid silver;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+a.slotBtnActive {
+  transition: 0.3s;
+  border-radius: 50%;
+}
+a.slotBtnActive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 6px -4px grey;
+}
+
+a.slotBtnActive:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1b9";
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.red {
+  color: red;
+}
+.white {
+  color: white;
+}
+.blue {
+  color: blue;
+}
+.black {
+  color: black;
+}
