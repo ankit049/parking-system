@@ -10,7 +10,9 @@ class MainSection extends React.Component {
       <Aux>
         <div className={classes.mainSection}>
           <div className={classes.actionSection}>
-            <button onClick={this.props.generateTicket}>Park Car & Generate Ticket</button>
+            <button onClick={this.props.generateTicket}>
+              <i className="fas fa-sign-in-alt" style={{display:'inline-block',marginRight:'10px'}}></i>
+              Park Car & Generate Ticket</button>
             <div className={classes.searchSec}>
               <input
                 type="text"

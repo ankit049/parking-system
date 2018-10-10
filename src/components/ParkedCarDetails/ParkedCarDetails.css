@@ -62,7 +62,7 @@
   bottom: -2px;
   width: 100%;
   border-top: 1px solid silver;
-  background: aliceblue;
+  background: linear-gradient(aliceblue,#bde0ff);
 }
 
 .ParkedCarDetailsTitle {

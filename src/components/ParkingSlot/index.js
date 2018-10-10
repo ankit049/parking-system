@@ -10,7 +10,9 @@ class ParkingSlot extends React.Component {
         <div className={classes.inputSlotSection}>
           <button
             disabled={this.props.generateSlot}
-            onClick={this.props.generateSlotHandler}>Generate Slots</button>
+            onClick={this.props.generateSlotHandler}>
+            <i className="fas fa-car" style={{display:'inline-block',marginRight:'10px'}}></i>
+            Generate Parking Slots</button>
         </div>
         {this.props.generateSlot ?
           <div className={classes.slotContainer}>
