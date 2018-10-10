@@ -1,7 +1,7 @@
 .ticketWrapper {
   text-align: center;
   display: inline-block;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .ticketSec {
@@ -63,4 +63,12 @@
   width: 100%;
   border-top: 1px solid silver;
   background: aliceblue;
+}
+
+.ParkedCarDetailsTitle {
+  text-align:center;
+  margin:100px 0px 15px 0px;
+  paddingTop:30px;
+  color: dimgray;
+  font-weight: normal;
 }

@@ -8,7 +8,7 @@ class ParkedCarDetails extends React.Component {
     console.log("Details : "+ JSON.stringify(this.props.details));
     return (
       <Aux>
-        <h3 style={{textAlign:'center',margin:'0px 0px 15px 0px',paddingTop:'30px'}}>Current Parked Car Details</h3>
+        <h3 className={classes.ParkedCarDetailsTitle}>Current Parked Car Details</h3>
         { this.props.details ?
           <Aux>
             <div className={classes.ticketWrapper}>
